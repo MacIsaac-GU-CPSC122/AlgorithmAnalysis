@@ -56,6 +56,33 @@ def selection_sort(values: list[int]) -> None:
     return counts
 
 
+def bubble_sort(values: list[int]) -> None:
+    """Sort arr in ascending order using bubble sort with early exit.
+    
+    For each pass through the list:
+
+        For each adjacent pair in the unsorted portion:
+            If the elements are out of order:
+                Swap the elements
+
+        If no swaps occurred:
+            Exit the outer loop
+    
+    """
+    pass
+
+
+def insertion_sort(values: list[int]) -> None:
+    """Sort arr in ascending order using insertion sort.
+    
+    For each element in the list, starting with the second:
+
+        While this element can move left and is smaller than its left neighbor:
+            Swap this element with its left neighbor
+        
+    """
+    pass
+
 
 def main():
     l = [1,8,5,2,4,9,0]
