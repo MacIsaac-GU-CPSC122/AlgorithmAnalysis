@@ -30,11 +30,14 @@ def selection_sort(values: list[int]) -> None:
         while j < len(values):
             counts["loop_comparisons"] += 1
 
-            
+            counts["data_comparisons"] += 1
             if values[j] < values[min_index]:
                 # Update min_index.
+                
+                counts["data_assignments"] += 1
                 min_index = j
-                pass
+            
+            counts["loop_assignments"] += 1    
             j += 1
         
         # keep tracks of the last while loop comparison
@@ -44,9 +47,12 @@ def selection_sort(values: list[int]) -> None:
         # if current i is the minimum value, do nothing
         # if not, swap items i and min_index
         # count the operations it takes to do these
+        counts["data_assignments"] += 3
         swap(values, i, min_index)
 
         print(f"{i}: {values} ")
+        
+        counts["loop_assignments"] += 1
         i += 1
         
     # keep track of the last while loop comparison
